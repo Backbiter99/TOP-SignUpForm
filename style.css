@@ -1,11 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Yatra+One&display=swap");
 
+:root {
+  --transparent: rgba(255, 255, 255, 0);
+}
+
+* {
+  background: whitesmoke;
+}
+
 body {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   font-family: "Roboto Slab", serif;
+  margin: 0;
+  padding: 0;
+}
+
+.left,
+.picture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100%;
 }
 
 .left {
@@ -13,17 +32,50 @@ body {
   font-family: "Yatra One", serif;
 }
 
+.picture {
+  background-image: url("./photo-1585202900225-6d3ac20a6962.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 100%;
+}
+
 .heading {
+  position: relative;
+  top: 150px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: rgba(14, 10, 10, 0.384);
+  padding: 1% 0 1%;
 }
 
 .logo {
+  background-color: var(--transparent);
   height: 75px;
   width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.heading h1 {
+  background-color: var(--transparent);
+  padding: 0;
+  margin: 0;
 }
 
 .right {
+  position: fixed;
+  left: 35%;
+  height: 100vh;
+  width: 65%;
+}
+
+.content {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
