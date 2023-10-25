@@ -2,10 +2,15 @@
 
 :root {
   --transparent: rgba(255, 255, 255, 0);
+  --heading-background: rgba(14, 10, 10, 0.384);
+  --heading-font-size: 48px;
+  --leafy-green: rgba(4, 77, 4, 0.767);
+  --form-font-color: rgba(0, 0, 0, 0.705);
 }
 
 * {
-  background: whitesmoke;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -14,8 +19,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Roboto Slab", serif;
-  margin: 0;
-  padding: 0;
+  background: whitesmoke;
 }
 
 .left,
@@ -47,7 +51,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(14, 10, 10, 0.384);
+  background-color: var(--heading-background);
   padding: 1% 0 1%;
 }
 
@@ -55,14 +59,13 @@ body {
   background-color: var(--transparent);
   height: 75px;
   width: auto;
-  padding: 0;
-  margin: 0;
 }
 
 .heading h1 {
   background-color: var(--transparent);
-  padding: 0;
-  margin: 0;
+  font-size: var(--heading-font-size);
+  color: whitesmoke;
+  margin-left: 15px;
 }
 
 .right {
@@ -73,10 +76,96 @@ body {
 }
 
 .content {
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.upper {
+  font-weight: 600;
+}
+
+.upper p {
+  margin: 1% 0 1%;
+}
+
+/* Form Styles */
+.main {
+  margin: 2% 0 2%;
+  color: var(--form-font-color);
+}
+
+.main h2 {
+  padding: 1% 0 1%;
+  background-color: white;
+}
+
+.form {
+  padding-bottom: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.form-group {
+  margin-top: 1%;
+  flex: 0 0 48%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 75%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--leafy-green);
+  box-shadow: 0 0 5px rgba(8, 85, 8, 0.5);
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  padding: 8px 36px;
+  margin: 3% 0 0;
+  background-color: var(--leafy-green);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darkgreen;
+}
+
+.lower {
+  font-size: 14px;
+}
+
+.lower a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--leafy-green);
 }
